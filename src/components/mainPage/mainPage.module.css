@@ -1,5 +1,5 @@
 .container {
-  padding: 20px;
+  padding: 50px 20px;
 }
 
 .spinnerBox {
@@ -18,15 +18,23 @@
 .headerButtonBox {
   display: flex;
   justify-content: center;
+  /* max-inline-size: 50%; */
+}
+
+.headerButtonBox Button {
+  max-inline-size: 100%;
+  min-inline-size: 300px;
 }
 
 .documentContainer {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
 }
 
 .documentItem {
+  max-inline-size: 500px;
   display: flex;
   flex-direction: column;
   gap: 10px;
