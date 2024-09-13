@@ -11,7 +11,7 @@ import { useDispatch } from "../../services/store";
 import { IAddedDocument, IDocument } from "../../types/types";
 import { addDataItem, updateDataItem } from "../../services/actions/actions";
 import { formatDate } from "../../utils/utils";
-
+import styles from "./documentForm.module.css";
 interface DocumentFormProps {
   onClose: () => void;
   initialData?: IDocument | null;
@@ -73,13 +73,19 @@ const DocumentForm: React.FC<DocumentFormProps> = ({
         // Создание нового документа
         dispatch(addDataItem({ newItem: formData, token }));
       }
-      onClose(); 
+      onClose();
     }
+  };
+
+  const isFormValid = () => {
+    return Object.values(formData).every((value) => value.trim() !== "");
   };
 
   return (
     <Dialog open onClose={onClose}>
-      <DialogTitle>Добавить новый документ</DialogTitle>
+      <DialogTitle>
+        <h3 className={styles.dialogTitle}>Добавить новый документ</h3>
+      </DialogTitle>
       <DialogContent>
         <TextField
           margin="dense"
@@ -150,12 +156,17 @@ const DocumentForm: React.FC<DocumentFormProps> = ({
           onChange={handleChange}
         />
       </DialogContent>
-      <DialogActions>
+      <DialogActions className={styles.buttonBox} MuiDialogActions-root>
         <Button variant="contained" onClick={onClose} color="primary">
           Отмена
         </Button>
 
-        <Button variant="contained" onClick={handleSubmit} color="primary">
+        <Button
+          disabled={!isFormValid()}
+          variant="contained"
+          onClick={handleSubmit}
+          color="primary"
+        >
           Сохранить
         </Button>
       </DialogActions>

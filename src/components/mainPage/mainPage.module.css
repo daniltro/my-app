@@ -41,14 +41,14 @@
   flex: 300px; /* базовая ширина элемента и возможность его растягивания */
   padding: 16px;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 7px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .documentOption {
-  /* block-size: 25px; */
-  border-radius: 8px;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.42);
+  padding: 0 5px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.42);
 }
 
 .documentOption:last-child {

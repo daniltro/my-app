@@ -1,0 +1,10 @@
+.buttonBox .MuiDialogActions-root{
+  display: flex;
+  justify-content: center;
+  gap: 30px
+}
+
+.dialogTitle {
+  font-weight: 600;
+  margin: 10px 0 0 0;
+}

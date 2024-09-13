@@ -214,7 +214,6 @@ export const MainPage: React.FC = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("authToken");
-
     if (!token) {
       navigate("/login");
     } else {
