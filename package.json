@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://github.com/daniltro/myTestSPA",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -27,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "pg-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,7 +51,8 @@
     ]
   },
   "devDependencies": {
-    "@types/redux-logger": "^3.0.13"
+    "@types/redux-logger": "^3.0.13",
+    "gh-pages": "^6.1.1"
   },
   "packageManager": "yarn@3.5.0+sha512.2dc70be5fce9f66756d25b00a888f3ca66f86b502b76750e72ba54cec89da767b938c54124595e26f868825688e0fe3552c26c76a330673343057acadd5cfcf2"
 }
