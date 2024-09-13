@@ -1,4 +1,4 @@
-import { createAsyncThunk, isRejectedWithValue } from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import { deleteData, getData, postData, postUpdateData } from "../../api/api";
 import { removeDataFromPage } from "../slices/dataSlice";
 import { handleError } from "../../utils/utils";
@@ -46,7 +46,7 @@ export const addDataItem = createAsyncThunk<
 });
 
 export const updateDataItem = createAsyncThunk<
-  IPostDataResponse, 
+  IPostDataResponse,
   { id: string; editItem: IDocument; token: string }
 >(
   "data/updateDataItem",
