@@ -23,12 +23,14 @@ import { IDocument } from "../../types/types";
 import { fetchData, removeDataItem } from "../../services/actions/actions";
 import { formatDate } from "../../utils/utils";
 import styles from "./mainPage.module.css";
+import { useNavigate } from "react-router-dom";
 
 export const MainPage: React.FC = () => {
   const dispatch = useDispatch();
   const data = useSelector(selectAllDocuments);
   const loading = useSelector(selectDocumentsLoading);
   const error = useSelector(selectDocumentsError);
+  const navigate = useNavigate();
 
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [currentDocument, setCurrentDocument] = useState<IDocument | null>(
@@ -37,10 +39,15 @@ export const MainPage: React.FC = () => {
 
   useEffect(() => {
     const token = localStorage.getItem("authToken");
-    if (token) {
+
+    if (!token) {
+      // Если токена нет, перенаправляем на страницу входа
+      navigate("/login");
+    } else {
+      // Если токен есть, загружаем данные
       dispatch(fetchData(token));
     }
-  }, [dispatch]);
+  }, [dispatch, navigate]);
 
   const handleDelete = (id: string) => {
     const token = localStorage.getItem("authToken");
