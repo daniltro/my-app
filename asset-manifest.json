@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/daniltro/my-app/static/css/main.ff73f3c6.css",
-    "main.js": "/daniltro/my-app/static/js/main.2b3707b7.js",
-    "static/js/453.ed3810f9.chunk.js": "/daniltro/my-app/static/js/453.ed3810f9.chunk.js",
-    "index.html": "/daniltro/my-app/index.html",
-    "main.ff73f3c6.css.map": "/daniltro/my-app/static/css/main.ff73f3c6.css.map",
-    "main.2b3707b7.js.map": "/daniltro/my-app/static/js/main.2b3707b7.js.map",
-    "453.ed3810f9.chunk.js.map": "/daniltro/my-app/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/my-app/static/css/main.ff73f3c6.css",
+    "main.js": "/my-app/static/js/main.5f1a8497.js",
+    "static/js/453.ed3810f9.chunk.js": "/my-app/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/my-app/index.html",
+    "main.ff73f3c6.css.map": "/my-app/static/css/main.ff73f3c6.css.map",
+    "main.5f1a8497.js.map": "/my-app/static/js/main.5f1a8497.js.map",
+    "453.ed3810f9.chunk.js.map": "/my-app/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff73f3c6.css",
-    "static/js/main.2b3707b7.js"
+    "static/js/main.5f1a8497.js"
   ]
 }
