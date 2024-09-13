@@ -1,6 +1,5 @@
-html,
-body {
-  margin: 0;
+.container {
+  padding: 20px;
 }
 
 .spinnerBox {
@@ -8,49 +7,51 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100%;
 }
 
-.container {
+.flexContainer {
   display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.tableContainer {
-  margin-top: 100px;
-  margin: 100px;
+.headerButtonBox {
+  display: flex;
+  justify-content: center;
 }
 
-.table {
-  border-collapse: collapse;
+.documentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.tableHead,
-.tableBody {
-  border: none;
+.documentItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 300px; /* базовая ширина элемента и возможность его растягивания */
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.tableCell {
-  padding: 8px;
-  border: 1px solid transparent;
+.documentOption {
+  /* block-size: 25px; */
+  border-radius: 8px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.42);
 }
 
-.tableRow {
-  border: none;
+.documentOption:last-child {
+  margin-bottom: 20px;
 }
 
-.tableBody tr:nth-child(odd) {
-  background: #fff;
-}
-
-.tableBody tr:nth-child(even) {
-  background: #f7f7f7;
-}
-
-.tableHead .tableCell {
-  font-weight: bold;
-  border: none;
-  background: #d8d8d8;
-  color: #000000;
+.buttonBox {
+  margin-top: 20px;
+  inline-size: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .buttonBox Button {
