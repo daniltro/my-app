@@ -1,0 +1,58 @@
+html,
+body {
+  margin: 0;
+}
+
+.spinnerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+}
+
+.tableContainer {
+  margin-top: 100px;
+  margin: 100px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.tableHead,
+.tableBody {
+  border: none;
+}
+
+.tableCell {
+  padding: 8px;
+  border: 1px solid transparent;
+}
+
+.tableRow {
+  border: none;
+}
+
+.tableBody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.tableBody tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+.tableHead .tableCell {
+  font-weight: bold;
+  border: none;
+  background: #d8d8d8;
+  color: #000000;
+}
+
+.buttonBox Button {
+  inline-size: 100%;
+}
