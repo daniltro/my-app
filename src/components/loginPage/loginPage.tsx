@@ -33,7 +33,7 @@ export const LoginPage: React.FC = () => {
         "Token saved to localStorage:",
         localStorage.getItem("authToken")
       );
-      navigate("/"); // Redirect to home page
+      navigate("/"); 
     }
   }, [auth.status, auth.token, navigate]);
 
@@ -46,7 +46,7 @@ export const LoginPage: React.FC = () => {
         sx={{ pt: 5 }}
       >
         <Typography variant="h4" gutterBottom>
-          Авторизация
+          Войти
         </Typography>
         <form onSubmit={handleSubmit}>
           <div>
